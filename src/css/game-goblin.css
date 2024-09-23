@@ -1,0 +1,12 @@
+.field {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(4, 200px);
+}
+.field-item{
+    border: 1px solid black;
+}
+.img{
+    width: 200px;
+    height: 200px;
+}
