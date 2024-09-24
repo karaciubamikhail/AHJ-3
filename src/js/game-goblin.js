@@ -7,8 +7,9 @@ export class Game {
     this.lose = 0;
   }
   startGame() {
+    let pole = 16;
     //цикл для создания элементов
-    for (let i = 0; i <= 16; i++) {
+    for (let i = 0; i <= pole; i++) {
       const element = document.createElement("div");
       element.classList.add("field-item");
       this._item.appendChild(element);
@@ -18,11 +19,13 @@ export class Game {
     img.src = imgs;
     img.classList.add("img");
     setInterval(() => {
-      const elementImg = document.querySelectorAll(".field-item");
+      let elementImg = document.querySelectorAll(".field-item");
       let imgs = document.querySelector(".img");
       if (imgs) {
-        for (let i = 0; i >= elementImg.length; i++) {
-          elementImg[i].remove(imgs);
+        for (let element of elementImg) {
+          if (element.querySelector(".img")) {
+            element.remove(imgs);
+          }
         }
       }
       const position = Math.floor(Math.random() * 15);
