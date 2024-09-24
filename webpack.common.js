@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     publicPath: "",
+    assetModuleFilename: 'assets/images/[name][ext]'
   },
   resolve: {
     alias: {
@@ -35,11 +36,8 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(gif|png|jpg|jpeg|svg)?$/,
-        loader: "file-loader",
-        options: {
-          name: "/img/[name].[ext]",
-        },
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
