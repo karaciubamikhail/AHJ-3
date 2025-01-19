@@ -13,7 +13,7 @@ export class Game {
     this.lose = 0;
     this.loseNumber.innerHTML = 0;
     alert("Проиграл");
-    startGame();
+    //startGame();
   }
   startGame() {
     let pole = 16;
