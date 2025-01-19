@@ -1,4 +1,4 @@
-![CI](https://github.com//karaciubamikhail/AHJ-3/actions/workflows/web.yml/badge.svg)
+![CI](https://github.com/karaciubamikhail/AHJ-3/actions/workflows/web.yml/badge.svg)
 
 
 https://karaciubamikhail.github.io/AHJ-3/
